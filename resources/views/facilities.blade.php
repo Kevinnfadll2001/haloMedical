@@ -150,47 +150,49 @@
 
 <!-- JS VALIDATION -->
 <script>
-    document.getElementById("facility-form").addEventListener("submit", function(event) {
+document.getElementById("facility-form").addEventListener("submit", function(event) {
 
-        event.preventDefault();
+    event.preventDefault();
 
-        let required = [
-            "facility_name"
-            , "contact_name"
-            , "phone"
-            , "email"
-            , "preferred_services"
-            , "monthly_volume"
-        ];
+    let formValid = true; // ✅ FIXED — must be defined
 
-        required.forEach(id => {
-            let field = document.getElementById(id);
-            let msg = field.parentElement.querySelector(".required-msg");
+    let required = [
+        "facility_name",
+        "contact_name",
+        "phone",
+        "email",
+        "preferred_services",
+        "monthly_volume"
+    ];
 
-            field.classList.remove("field-error");
-            msg.style.display = "none";
+    required.forEach(id => {
+        let field = document.getElementById(id);
+        let msg = field.parentElement.querySelector(".required-msg");
 
-            // EMPTY FIELD CHECK
-            if (!field.value.trim()) {
-                field.classList.add("field-error");
-                msg.textContent = "This field is required.";
-                msg.style.display = "block";
-                formValid = false;
-                return;
-            }
+        field.classList.remove("field-error");
+        msg.style.display = "none";
 
-            // NUMBER CHECK FOR MONTHLY VOLUME
-            if (id === "monthly_volume" && isNaN(field.value)) {
-                field.classList.add("field-error");
-                msg.textContent = "Please enter a valid amount..";
-                msg.style.display = "block";
-                formValid = false;
-            }
-        });
+        // EMPTY FIELD CHECK
+        if (!field.value.trim()) {
+            field.classList.add("field-error");
+            msg.textContent = "This field is required.";
+            msg.style.display = "block";
+            formValid = false;
+            return;
+        }
 
-        if (formValid) this.submit();
+        // NUMBER CHECK FOR MONTHLY VOLUME
+        if (id === "monthly_volume" && isNaN(field.value)) {
+            field.classList.add("field-error");
+            msg.textContent = "Please enter a valid amount.";
+            msg.style.display = "block";
+            formValid = false;
+        }
     });
 
+    if (formValid) this.submit();
+});
 </script>
+
 
 @endsection

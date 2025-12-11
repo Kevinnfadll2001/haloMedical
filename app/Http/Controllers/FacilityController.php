@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\FacilityRequest;
 class FacilityController extends Controller
 {
     public function store(Request $request)
@@ -19,7 +19,7 @@ class FacilityController extends Controller
             'message' => 'nullable'
         ]);
 
-        DB::table('facility_requests')->insert($validated);
+        FacilityRequest::create($validated);
 
         return back()->with('success', 'Your partnership request has been submitted!');
     }

@@ -1,5 +1,5 @@
 (function($) {
-	
+
 	"use strict";
 
 	const locales = ["en-GB","ar-SA","zh-CN","de-DE","es-ES","fr-FR","hi-IN","it-IT","in-ID","ja-JP","ko-KR","nl-NL","no-NO","pl-PL","pt-BR","sv-SE","fi-FI","th-TH","tr-TR","uk-UA","vi-VN","ru-RU","he-IL"];
@@ -11,7 +11,13 @@
 	}
 
 	const dropdownBtn = document.getElementById("dropdown-btn");
-	const dropdownContent = document.getElementById("dropdown-content");
+const dropdownContent = document.getElementById("dropdown-content");
+
+// If elements do NOT exist, stop running the script
+if (!dropdownBtn || !dropdownContent) {
+    return;
+}
+
 
 	function setSelectedLocale(locale) {
 	  const intlLocale = new Intl.Locale(locale);
@@ -53,7 +59,7 @@
 	  }
 	}
 
-	
+
 
 })(window.jQuery);
 
