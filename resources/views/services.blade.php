@@ -76,14 +76,14 @@
                                     </div>
                                 </div>
 
-                                <!-- IMAGES (ORIGINAL LAYOUT) -->
+                                <!-- IMAGES -->
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-1.jpg" alt="">
+                                            <img src="assets/images/service/service-22.jpg" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                            <img src="assets/images/service/service-2.jpg" alt="">
+                                            <img src="assets/images/service/service-23.jpg" alt="">
                                         </figure>
                                     </div>
                                 </div>
@@ -148,20 +148,22 @@
                                     </div>
                                 </div>
 
-                                <!-- IMAGES -->
+                                <!-- IMAGES (ORIGINAL LAYOUT) -->
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-22.jpg" alt="">
+                                            <img src="assets/images/service/service-1.jpg" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                            <img src="assets/images/service/service-23.jpg" alt="">
+                                            <img src="assets/images/service/service-2.jpg" alt="">
                                         </figure>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+
+
 
 
                         <!-- ========================================================= -->
