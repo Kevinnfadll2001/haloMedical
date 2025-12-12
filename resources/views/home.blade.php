@@ -7,7 +7,7 @@
 
                 <!-- Slide 1 -->
                 <div class="slide-item p_relative">
-                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner-1.jpg);"></div>
+                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner1.png);"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             <h2>HALO MEDICAL TRANSPORT</h2>
@@ -35,7 +35,7 @@
 
                 <!-- Slide 2 -->
                 <div class="slide-item p_relative">
-                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner-2.jpg);"></div>
+                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner1.png);"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             <h2>HALO MEDICAL TRANSPORT</h2>
@@ -63,7 +63,7 @@
 
                 <!-- Slide 3 -->
                 <div class="slide-item p_relative">
-                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner-3.jpg);"></div>
+                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner1.png);"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             <h2>HALO MEDICAL TRANSPORT</h2>
@@ -207,24 +207,33 @@
 
         <!-- about-section end -->
 
-
         <!-- brand-section -->
         <section class="brand-section">
-            <div class="auto-container">
-                <div class="brand-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-                    <div class="brand-logo-box"><a href="index.html"><img src="assets/images/brand/brand-1.png"
-                                alt=""></a></div>
-                    <div class="brand-logo-box"><a href="index.html"><img src="assets/images/brand/brand-2.png"
-                                alt=""></a></div>
-                    <div class="brand-logo-box"><a href="index.html"><img src="assets/images/brand/brand-3.png"
-                                alt=""></a></div>
-                    <div class="brand-logo-box"><a href="index.html"><img src="assets/images/brand/brand-4.png"
-                                alt=""></a></div>
-                    <div class="brand-logo-box"><a href="index.html"><img src="assets/images/brand/brand-5.png"
-                                alt=""></a></div>
-                </div>
+    <div class="auto-container">
+        <div class="brand-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+
+            <div class="brand-logo-box">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('assets/images/brand/brand-1.png') }}" alt="">
+                </a>
             </div>
-        </section>
+
+            <div class="brand-logo-box">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('assets/images/brand/brand-1-2.png') }}" alt="">
+                </a>
+            </div>
+
+            <div class="brand-logo-box">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('assets/images/brand/brand-1-3.png') }}" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
         <!-- brand-section end -->
 
 
@@ -397,7 +406,7 @@
         <!-- =============================================== -->
         <section class="chooseus-section centred pt_120 pb_90">
             <div class="bg-layer parallax-bg" data-parallax='{"y": 100}'
-                style="background-image: url(assets/images/background/chooseus-bg.jpg);"></div>
+                style="background-image: url(assets/images/background/back1.png);"></div>
 
             <div class="auto-container">
                 <div class="sec-title centred light mb_50">
