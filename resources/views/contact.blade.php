@@ -243,170 +243,168 @@
 </section> --}}
 <!-- subscribe-section end -->
 <script>
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        event.preventDefault();
+    let requiredFields = [
+        "name",
+        "phone",
+        "email",
+        "pickup_address",
+        "destination_address",
+        "date",
+        "time"
+    ];
 
-        let requiredFields = [
-            "name", "phone", "email"
-            , "pickup_address", "destination_address"
-            , "date", "time"
-        ];
+    let formIsValid = true;
 
+    requiredFields.forEach(function (id) {
+        let field = document.getElementById(id);
+        let msg = field.parentElement.querySelector(".required-msg");
 
-        let formIsValid = true;
+        field.classList.remove("field-error");
+        msg.style.display = "none";
 
-        requiredFields.forEach(function(id) {
-            let field = document.getElementById(id);
-            let msg = field.parentElement.querySelector(".required-msg");
-
-            field.classList.remove("field-error");
-            msg.style.display = "none";
-
-            if (!field.value || field.value.trim() === "") {
-                field.classList.add("field-error");
-                msg.style.display = "block";
-                formIsValid = false;
-            }
-        });
-
-        if (formIsValid) {
-            this.submit();
+        if (!field.value || field.value.trim() === "") {
+            field.classList.add("field-error");
+            msg.style.display = "block";
+            formIsValid = false;
         }
     });
 
+    if (formIsValid) {
+        this.submit();
+    }
+});
 </script>
 
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxqohTB1YdsTzoFQlrm1xm1Q9E2td60Fg&libraries=places"></script>
+{{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxqohTB1YdsTzoFQlrm1xm1Q9E2td60Fg&libraries=places"></script> --}}
 
 <script>
-    function initAutocomplete() {
+function initAutocomplete() {
 
-        function formatUSAddress(place) {
-            if (!place.address_components) return place.formatted_address || "";
+    function formatUSAddress(place) {
+        if (!place.address_components) return place.formatted_address || "";
 
-            let street = ""
-                , city = ""
-                , state = ""
-                , zip = "";
+        let street = "";
+        let city = "";
+        let state = "";
+        let zip = "";
 
-            place.address_components.forEach(c => {
-                if (c.types.includes("street_number")) street = c.long_name + " " + street;
-                if (c.types.includes("route")) street += c.long_name;
-                if (c.types.includes("locality")) city = c.long_name;
-                if (c.types.includes("administrative_area_level_1")) state = c.short_name;
-                if (c.types.includes("postal_code")) zip = c.long_name;
-            });
+        place.address_components.forEach(c => {
+            if (c.types.includes("street_number")) street = c.long_name + " " + street;
+            if (c.types.includes("route")) street += c.long_name;
+            if (c.types.includes("locality")) city = c.long_name;
+            if (c.types.includes("administrative_area_level_1")) state = c.short_name;
+            if (c.types.includes("postal_code")) zip = c.long_name;
+        });
 
-            // Build address safely
-            let parts = [];
-            if (street) parts.push(street.trim());
-            if (city) parts.push(city);
-            if (state) parts.push(state);
-            if (zip) parts.push(zip);
+        let parts = [];
+        if (street) parts.push(street.trim());
+        if (city) parts.push(city);
+        if (state) parts.push(state);
+        if (zip) parts.push(zip);
 
-            // If any parts exist, format them
-            if (parts.length > 0) {
-                return parts.join(", ") + ", USA";
-            }
-
-            // Fallback to Google's formatted address
-            return place.formatted_address || "";
+        if (parts.length > 0) {
+            return parts.join(", ") + ", USA";
         }
 
-
-        const allowedCounties = [
-            "Los Angeles County"
-            , "Orange County"
-            , "Riverside County"
-            , "San Bernardino County"
-        ];
-
-
-        function isInsideAllowedCounty(place) {
-            if (!place.address_components) return false;
-
-            let county = "";
-
-            place.address_components.forEach(component => {
-                if (component.types.includes("administrative_area_level_2")) {
-                    county = component.long_name;
-                }
-            });
-
-            return allowedCounties.includes(county);
-        }
-
-        // === PICKUP Autocomplete With County Restriction ===
-        const pickupInput = document.getElementById("pickup_address");
-        const pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput, {
-            types: ["geocode"]
-            , componentRestrictions: {
-                country: "us"
-            }
-        });
-
-        pickupAutocomplete.addListener("place_changed", function() {
-            const place = pickupAutocomplete.getPlace();
-
-            if (!isInsideAllowedCounty(place)) {
-                alert("Sorry, we only provide pick-up service in:\n\nLos Angeles County\nOrange County\nRiverside County\nSan Bernardino County\nSan Diego County");
-                pickupInput.value = "";
-                return;
-            }
-
-            pickupInput.value = formatUSAddress(place);
-        });
-
-        // === DESTINATION Autocomplete (ALL USA ALLOWED) ===
-        const dropoffInput = document.getElementById("destination_address");
-        const dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput, {
-            types: ["geocode"]
-            , componentRestrictions: {
-                country: "us"
-            }
-        });
-
-        dropoffAutocomplete.addListener("place_changed", function() {
-            const place = dropoffAutocomplete.getPlace();
-            dropoffInput.value = formatUSAddress(place);
-        });
+        return place.formatted_address || "";
     }
 
-    google.maps.event.addDomListener(window, "load", initAutocomplete);
+    const allowedCounties = [
+        "Los Angeles County",
+        "Orange County",
+        "Riverside County",
+        "San Bernardino County",
+        "San Diego County"
+    ];
 
+    function isInsideAllowedCounty(place) {
+        if (!place.address_components) return false;
+
+        let county = "";
+
+        place.address_components.forEach(component => {
+            if (component.types.includes("administrative_area_level_2")) {
+                county = component.long_name;
+            }
+        });
+
+        return allowedCounties.includes(county);
+    }
+
+    // === PICKUP ADDRESS ===
+    const pickupInput = document.getElementById("pickup_address");
+    const pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput, {
+        types: ["geocode"],
+        componentRestrictions: { country: "us" }
+    });
+
+    pickupAutocomplete.addListener("place_changed", function () {
+        const place = pickupAutocomplete.getPlace();
+
+        if (!isInsideAllowedCounty(place)) {
+            alert(
+                "Sorry, we only provide pick-up service in:\n\n" +
+                "Los Angeles County\n" +
+                "Orange County\n" +
+                "Riverside County\n" +
+                "San Bernardino County\n" +
+                "San Diego County"
+            );
+            pickupInput.value = "";
+            return;
+        }
+
+        pickupInput.value = formatUSAddress(place);
+    });
+
+    // === DESTINATION ADDRESS ===
+    const dropoffInput = document.getElementById("destination_address");
+    const dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput, {
+        types: ["geocode"],
+        componentRestrictions: { country: "us" }
+    });
+
+    dropoffAutocomplete.addListener("place_changed", function () {
+        const place = dropoffAutocomplete.getPlace();
+        dropoffInput.value = formatUSAddress(place);
+    });
+}
+
+google.maps.event.addDomListener(window, "load", initAutocomplete);
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-        // === DATE ===
-        const dateInput = document.getElementById("date");
-        let today = new Date().toISOString().split("T")[0]; // format YYYY-MM-DD
+    // === DATE ===
+    const dateInput = document.getElementById("date");
+    let today = new Date().toISOString().split("T")[0];
 
-        dateInput.min = today; // user cannot pick a past day
-        dateInput.value = today; // optional: auto-fill today's date
+    dateInput.min = today;
+    dateInput.value = today;
 
-        // === TIME ===
-        const timeInput = document.getElementById("time");
+    // === TIME ===
+    const timeInput = document.getElementById("time");
 
-        timeInput.addEventListener("change", function() {
-            let value = this.value;
+    timeInput.addEventListener("change", function () {
+        let value = this.value;
 
-            if (value < "05:00") {
-                alert("Time must be after 5:00 AM");
-                this.value = "05:00";
-            }
+        if (value < "05:00") {
+            alert("Time must be after 5:00 AM");
+            this.value = "05:00";
+        }
 
-            if (value > "22:00") {
-                alert("Time must be before 10:00 PM");
-                this.value = "22:00";
-            }
-        });
+        if (value > "22:00") {
+            alert("Time must be before 10:00 PM");
+            this.value = "22:00";
+        }
     });
-
+});
 </script>
+
 
 
 
