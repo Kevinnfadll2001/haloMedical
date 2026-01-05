@@ -59,13 +59,13 @@
                         After-hours transport available with advance notice.
                     </p>
 
-                    <h4>Service Areas</h4>
+                    {{-- <h4>Service Areas</h4>
                     <ul style="padding-left: 20px; margin: 0;">
                         <li>Orange County</li>
                         <li>Riverside County</li>
                         <li>San Bernardino County</li>
                         <li>Los Angeles County</li>
-                    </ul>
+                    </ul> --}}
 
 
                 </div>
@@ -148,7 +148,7 @@
 
 
                             <!-- Service Area -->
-                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            {{-- <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <select name="service_area" id="service_area" class="form-control">
                                     <option value="">Select Service Area</option>
                                     <option>Orange County</option>
@@ -157,10 +157,10 @@
                                     <option>Los Angeles County</option>
                                 </select>
                                 <span class="required-msg" style="display:none;">This field is required.</span>
-                            </div>
+                            </div> --}}
 
                             <!-- Service Type -->
-                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            {{-- <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <select name="service_type" id="service_type" class="form-control">
                                     <option value="">Select Service Type</option>
                                     <option>Wheelchair Transport</option>
@@ -171,21 +171,26 @@
                                     <option>Long-Distance Transport</option>
                                 </select>
                                 <span class="required-msg" style="display:none;">This field is required.</span>
+                            </div> --}}
+
+                            <!-- Pickup Date -->
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label style="font-weight:600; margin-bottom:5px; display:block;">
+                                    Pickup Date
+                                </label>
+                                <input type="date" name="date" id="date">
+                                <span class="required-msg" style="display:none;">This field is required.</span>
                             </div>
 
-                            <!-- Date -->
+                            <!-- Pickup Time -->
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <input type="date" name="date" id="date" min="" >
-<span class="required-msg" style="display:none;">This field is required.</span>
-
-                            </div>
-
-                            <!-- Time -->
-                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label style="font-weight:600; margin-bottom:5px; display:block;">
+                                    Pickup Time
+                                </label>
                                 <input type="time" name="time" id="time" min="05:00" max="22:00">
-<span class="required-msg" style="display:none;">This field is required.</span>
-
+                                <span class="required-msg" style="display:none;">This field is required.</span>
                             </div>
+
 
                             <!-- Notes (optional, no validation) -->
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -245,9 +250,9 @@
         let requiredFields = [
             "name", "phone", "email"
             , "pickup_address", "destination_address"
-            , "service_area", "service_type"
             , "date", "time"
         ];
+
 
         let formIsValid = true;
 
@@ -316,8 +321,8 @@
             , "Orange County"
             , "Riverside County"
             , "San Bernardino County"
-            , "San Diego County"
         ];
+
 
         function isInsideAllowedCounty(place) {
             if (!place.address_components) return false;
@@ -374,32 +379,33 @@
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
 
-    // === DATE ===
-    const dateInput = document.getElementById("date");
-    let today = new Date().toISOString().split("T")[0]; // format YYYY-MM-DD
+        // === DATE ===
+        const dateInput = document.getElementById("date");
+        let today = new Date().toISOString().split("T")[0]; // format YYYY-MM-DD
 
-    dateInput.min = today;   // user cannot pick a past day
-    dateInput.value = today; // optional: auto-fill today's date
+        dateInput.min = today; // user cannot pick a past day
+        dateInput.value = today; // optional: auto-fill today's date
 
-    // === TIME ===
-    const timeInput = document.getElementById("time");
+        // === TIME ===
+        const timeInput = document.getElementById("time");
 
-    timeInput.addEventListener("change", function() {
-        let value = this.value;
+        timeInput.addEventListener("change", function() {
+            let value = this.value;
 
-        if (value < "05:00") {
-            alert("Time must be after 5:00 AM");
-            this.value = "05:00";
-        }
+            if (value < "05:00") {
+                alert("Time must be after 5:00 AM");
+                this.value = "05:00";
+            }
 
-        if (value > "22:00") {
-            alert("Time must be before 10:00 PM");
-            this.value = "22:00";
-        }
+            if (value > "22:00") {
+                alert("Time must be before 10:00 PM");
+                this.value = "22:00";
+            }
+        });
     });
-});
+
 </script>
 
 

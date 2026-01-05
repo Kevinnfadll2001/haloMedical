@@ -12,8 +12,7 @@ class Contact extends Model
         'email',
         'pickup_address',
         'destination_address',
-        'service_area',   // <-- NEW
-        'service_type',
+
         'date',
         'time',
         'notes',

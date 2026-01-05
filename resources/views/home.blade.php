@@ -389,7 +389,7 @@
         <!-- ANIMATION BOX -->
         <!-- =============================================== -->
 
-        <div class="animation-box">
+        {{-- <div class="animation-box">
             <div class="shape">
                 <div class="shape-1"></div>
                 <div class="shape-2"></div>
@@ -398,7 +398,7 @@
             </div>
             <figure class="image-box p_absolute r_0 b_0"><img src="assets/images/resource/resized_150x267.png" alt="">
             </figure>
-        </div>
+        </div> --}}
         <br><br><br><br>
 
         <!-- =============================================== -->
@@ -895,7 +895,7 @@
 
 
         <!-- news-section -->
-        <section class="news-section pt_160 pb_90 z_1">
+        {{-- <section class="news-section pt_160 pb_90 z_1">
             <div class="auto-container">
                 <div class="sec-title centred mb_50">
                     <span class="sub-title mb_12">Latest News</span>
@@ -969,7 +969,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- news-section end -->
 
 

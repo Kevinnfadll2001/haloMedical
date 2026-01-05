@@ -16,8 +16,6 @@ class ContactController extends Controller
         'email'               => 'required|email|max:255',
         'pickup_address'      => 'required|string|max:255',
         'destination_address' => 'required|string|max:255',
-        'service_area'        => 'required|string|max:255',   // <-- NEW
-        'service_type'        => 'required|string|max:255',
         'date'                => 'required|date',
         'time'                => 'required',
         'notes'               => 'nullable|string',
