@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\FacilityRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\FacilityRequestMail;
+
 class FacilityController extends Controller
 {
     public function store(Request $request)
@@ -19,9 +21,13 @@ class FacilityController extends Controller
             'message' => 'nullable'
         ]);
 
+        // ✅ Save to database
         FacilityRequest::create($validated);
+
+        // ✅ Send email
+        Mail::to('kevinfadel15@gmail.com')
+            ->send(new FacilityRequestMail($validated));
 
         return back()->with('success', 'Your partnership request has been submitted!');
     }
 }
-
