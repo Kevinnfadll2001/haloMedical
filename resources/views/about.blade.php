@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="about-section pt_90 pb_120">
-            <figure class="image-layer"><img src="assets/images/resource/ambulance-1.png" alt=""></figure>
+            {{-- <figure class="image-layer"><img src="assets/images/resource/ambulance-1.png" alt=""></figure> --}}
             <div class="auto-container">
                 <div class="row align-items-center">
 

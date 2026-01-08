@@ -417,20 +417,20 @@
             </div>
 
             <!-- FOOTER BOTTOM -->
-            <div class="footer-bottom" style="padding:10px 0; background:#091018; color:#c7d0d5; font-size:13px;">
+            {{-- <div class="footer-bottom" style="padding:10px 0; background:#091018; color:#c7d0d5; font-size:13px;">
                 <div class="auto-container">
                     <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
                         <p style="margin:0;">© 2025 CareLine NEMT. All Rights Reserved.</p>
                         <p style="margin:0;"><i class="icon-17"></i> Southern California, USA</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Footer link hover style -->
             <style>
                 .footer-link:hover {
-                    color: #f4d03f !important;
-                    /* yellow hover */
+                    color: #5fa9d6 !important;
+
                 }
 
             </style>

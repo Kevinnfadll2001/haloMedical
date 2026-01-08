@@ -47,7 +47,8 @@
                             </p>
 
                             <div class="btn-box" style="display:flex; gap:15px; flex-wrap:wrap;">
-                                <a href="#" class="theme-btn btn-one">Book a Ride</a>
+                                <a href="{{ url('/contact') }}" class="theme-btn btn-one">Book a Ride</a>
+
                                 <a href="tel:XXX-XXX-XXXX" class="theme-btn btn-one"
                                     style="background:#0b3752; color:#ffffff; border:2px solid #fff;">
                                     Call Dispatch: (XXX) XXX-XXXX
@@ -136,7 +137,7 @@
 
         <!-- about-INDEX-section -->
         <section class="about-section pt_90 pb_120">
-            <figure class="image-layer"><img src="assets/images/resource/ambulance-1.png" alt=""></figure>
+            {{-- <figure class="image-layer"><img src="assets/images/resource/ambulance-1.png" alt=""></figure> --}}
             <div class="auto-container">
                 <div class="row align-items-center">
 
@@ -384,7 +385,7 @@
 
             </div>
         </section>
- <br><br>
+ <br><br><br>
         <!-- =============================================== -->
         <!-- ANIMATION BOX -->
         <!-- =============================================== -->
@@ -399,7 +400,7 @@
             <figure class="image-box p_absolute r_0 b_0"><img src="assets/images/resource/resized_150x267.png" alt="">
             </figure>
         </div> --}}
-        <br><br><br><br>
+
 
         <!-- =============================================== -->
         <!-- CHOOSE US -->
@@ -596,7 +597,7 @@
                             <div class="funfact-block-one">
                                 <div class="inner-box">
                                     <div class="count-outer">
-                                        <span class="odometer" data-count="15">00</span><span class="symble">+</span>
+                                        <span class="odometer" data-count="13">00</span><span class="symble">K+</span>
                                     </div>
                                     <p>Patients Served</p>
                                 </div>
