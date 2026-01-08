@@ -357,11 +357,11 @@
                                 <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Email:</strong> support@carelineNEMT.com</p>
                                 <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Address:</strong> Placeholder Address</p>
 
-                                <div class="social-links" style="display:flex; gap:12px; margin-top:12px;">
+                                {{-- <div class="social-links" style="display:flex; gap:12px; margin-top:12px;">
                                     <a href="#" style="color:#5fa9d6; font-size:16px;"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#" style="color:#5fa9d6; font-size:16px;"><i class="fab fa-instagram"></i></a>
                                     <a href="#" style="color:#5fa9d6; font-size:16px;"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 
