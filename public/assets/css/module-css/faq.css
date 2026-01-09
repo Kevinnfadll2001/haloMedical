@@ -166,7 +166,7 @@
   text-align: center;
   border: 1px solid #272727;
   border-radius: 20px 20px 30px 30px;
-  border-bottom: 5px solid #7B0000;
+  border-bottom: 5px solid #0b3752;
   padding-top: 24px;
   overflow: hidden;
   max-width: 280px;
@@ -220,7 +220,7 @@
   margin-bottom: 10px;
   border-top: solid;
   border-width: 5px;
-  border-color: #7B0000;
+  border-color: #0b3752;
   box-shadow: 0px -10px 60px 0px rgba(0, 0, 0, 0.06);
 }
 

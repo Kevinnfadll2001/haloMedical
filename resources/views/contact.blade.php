@@ -15,19 +15,19 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 single-column">
                     <div class="single-item">
                         <h5>Emergency Booking:</h5>
-                        <h2><a href="tel:912345431">+91 (234) 5431</a></h2>
+                        <h2><a href="tel:912345431">(951) 900-4840</a></h2>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 single-column">
                     <div class="single-item">
                         <h5>Emergency Booking:</h5>
-                        <h2><a href="tel:912345432">+91 (234) 5432</a></h2>
+                        <h2><a href="tel:912345432">(951) 900-4840</a></h2>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 single-column">
                     <div class="single-item">
                         <h5>Emergency Booking:</h5>
-                        <h2><a href="tel:912345433">+91 (234) 5433</a></h2>
+                        <h2><a href="tel:912345433">(951) 900-4840</a></h2>
                     </div>
                 </div>
             </div>
@@ -45,14 +45,15 @@
             <!-- MAP COLUMN -->
             <div class="col-lg-6 col-md-12 col-sm-12 map-column">
                 <div class="map-inner">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55945.16225505631!2d-73.90847969206546!3d40.66490264739892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1601263396347!5m2!1sen!2sbd" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    <iframe src="https://www.google.com/maps?q=21804+Cactus+Ave+Suite+103+Riverside+CA+92518&output=embed" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+
                 </div>
 
                 <!-- DISPATCH INFO -->
                 <div class="dispatch-info mt_30">
                     <h3>Dispatch Number</h3>
-                    <p style="font-size:22px; font-weight:600; margin-bottom:10px;">(XXX) XXX-XXXX</p>
+                    <p style="font-size:22px; font-weight:600; margin-bottom:10px;">(951) 900-4840</p>
 
                     <h4>Hours of Operation</h4>
                     <p>5 AM – 10 PM, 7 days a week<br>
@@ -243,166 +244,173 @@
 </section> --}}
 <!-- subscribe-section end -->
 <script>
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
 
-    let requiredFields = [
-        "name",
-        "phone",
-        "email",
-        "pickup_address",
-        "destination_address",
-        "date",
-        "time"
-    ];
+        let requiredFields = [
+            "name"
+            , "phone"
+            , "email"
+            , "pickup_address"
+            , "destination_address"
+            , "date"
+            , "time"
+        ];
 
-    let formIsValid = true;
+        let formIsValid = true;
 
-    requiredFields.forEach(function (id) {
-        let field = document.getElementById(id);
-        let msg = field.parentElement.querySelector(".required-msg");
+        requiredFields.forEach(function(id) {
+            let field = document.getElementById(id);
+            let msg = field.parentElement.querySelector(".required-msg");
 
-        field.classList.remove("field-error");
-        msg.style.display = "none";
+            field.classList.remove("field-error");
+            msg.style.display = "none";
 
-        if (!field.value || field.value.trim() === "") {
-            field.classList.add("field-error");
-            msg.style.display = "block";
-            formIsValid = false;
+            if (!field.value || field.value.trim() === "") {
+                field.classList.add("field-error");
+                msg.style.display = "block";
+                formIsValid = false;
+            }
+        });
+
+        if (formIsValid) {
+            this.submit();
         }
     });
 
-    if (formIsValid) {
-        this.submit();
-    }
-});
 </script>
 
 {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxqohTB1YdsTzoFQlrm1xm1Q9E2td60Fg&libraries=places"></script> --}}
 
 <script>
-function initAutocomplete() {
+    function initAutocomplete() {
 
-    function formatUSAddress(place) {
-        if (!place.address_components) return place.formatted_address || "";
+        function formatUSAddress(place) {
+            if (!place.address_components) return place.formatted_address || "";
 
-        let street = "";
-        let city = "";
-        let state = "";
-        let zip = "";
+            let street = "";
+            let city = "";
+            let state = "";
+            let zip = "";
 
-        place.address_components.forEach(c => {
-            if (c.types.includes("street_number")) street = c.long_name + " " + street;
-            if (c.types.includes("route")) street += c.long_name;
-            if (c.types.includes("locality")) city = c.long_name;
-            if (c.types.includes("administrative_area_level_1")) state = c.short_name;
-            if (c.types.includes("postal_code")) zip = c.long_name;
-        });
+            place.address_components.forEach(c => {
+                if (c.types.includes("street_number")) street = c.long_name + " " + street;
+                if (c.types.includes("route")) street += c.long_name;
+                if (c.types.includes("locality")) city = c.long_name;
+                if (c.types.includes("administrative_area_level_1")) state = c.short_name;
+                if (c.types.includes("postal_code")) zip = c.long_name;
+            });
 
-        let parts = [];
-        if (street) parts.push(street.trim());
-        if (city) parts.push(city);
-        if (state) parts.push(state);
-        if (zip) parts.push(zip);
+            let parts = [];
+            if (street) parts.push(street.trim());
+            if (city) parts.push(city);
+            if (state) parts.push(state);
+            if (zip) parts.push(zip);
 
-        if (parts.length > 0) {
-            return parts.join(", ") + ", USA";
+            if (parts.length > 0) {
+                return parts.join(", ") + ", USA";
+            }
+
+            return place.formatted_address || "";
         }
 
-        return place.formatted_address || "";
-    }
+        const allowedCounties = [
+            "Los Angeles County"
+            , "Orange County"
+            , "Riverside County"
+            , "San Bernardino County"
+            , "San Diego County"
+        ];
 
-    const allowedCounties = [
-        "Los Angeles County",
-        "Orange County",
-        "Riverside County",
-        "San Bernardino County",
-        "San Diego County"
-    ];
+        function isInsideAllowedCounty(place) {
+            if (!place.address_components) return false;
 
-    function isInsideAllowedCounty(place) {
-        if (!place.address_components) return false;
+            let county = "";
 
-        let county = "";
+            place.address_components.forEach(component => {
+                if (component.types.includes("administrative_area_level_2")) {
+                    county = component.long_name;
+                }
+            });
 
-        place.address_components.forEach(component => {
-            if (component.types.includes("administrative_area_level_2")) {
-                county = component.long_name;
+            return allowedCounties.includes(county);
+        }
+
+        // === PICKUP ADDRESS ===
+        const pickupInput = document.getElementById("pickup_address");
+        const pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput, {
+            types: ["geocode"]
+            , componentRestrictions: {
+                country: "us"
             }
         });
 
-        return allowedCounties.includes(county);
+        pickupAutocomplete.addListener("place_changed", function() {
+            const place = pickupAutocomplete.getPlace();
+
+            if (!isInsideAllowedCounty(place)) {
+                alert(
+                    "Sorry, we only provide pick-up service in:\n\n" +
+                    "Los Angeles County\n" +
+                    "Orange County\n" +
+                    "Riverside County\n" +
+                    "San Bernardino County\n" +
+                    "San Diego County"
+                );
+                pickupInput.value = "";
+                return;
+            }
+
+            pickupInput.value = formatUSAddress(place);
+        });
+
+        // === DESTINATION ADDRESS ===
+        const dropoffInput = document.getElementById("destination_address");
+        const dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput, {
+            types: ["geocode"]
+            , componentRestrictions: {
+                country: "us"
+            }
+        });
+
+        dropoffAutocomplete.addListener("place_changed", function() {
+            const place = dropoffAutocomplete.getPlace();
+            dropoffInput.value = formatUSAddress(place);
+        });
     }
 
-    // === PICKUP ADDRESS ===
-    const pickupInput = document.getElementById("pickup_address");
-    const pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput, {
-        types: ["geocode"],
-        componentRestrictions: { country: "us" }
-    });
+    google.maps.event.addDomListener(window, "load", initAutocomplete);
 
-    pickupAutocomplete.addListener("place_changed", function () {
-        const place = pickupAutocomplete.getPlace();
-
-        if (!isInsideAllowedCounty(place)) {
-            alert(
-                "Sorry, we only provide pick-up service in:\n\n" +
-                "Los Angeles County\n" +
-                "Orange County\n" +
-                "Riverside County\n" +
-                "San Bernardino County\n" +
-                "San Diego County"
-            );
-            pickupInput.value = "";
-            return;
-        }
-
-        pickupInput.value = formatUSAddress(place);
-    });
-
-    // === DESTINATION ADDRESS ===
-    const dropoffInput = document.getElementById("destination_address");
-    const dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput, {
-        types: ["geocode"],
-        componentRestrictions: { country: "us" }
-    });
-
-    dropoffAutocomplete.addListener("place_changed", function () {
-        const place = dropoffAutocomplete.getPlace();
-        dropoffInput.value = formatUSAddress(place);
-    });
-}
-
-google.maps.event.addDomListener(window, "load", initAutocomplete);
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
 
-    // === DATE ===
-    const dateInput = document.getElementById("date");
-    let today = new Date().toISOString().split("T")[0];
+        // === DATE ===
+        const dateInput = document.getElementById("date");
+        let today = new Date().toISOString().split("T")[0];
 
-    dateInput.min = today;
-    dateInput.value = today;
+        dateInput.min = today;
+        dateInput.value = today;
 
-    // === TIME ===
-    const timeInput = document.getElementById("time");
+        // === TIME ===
+        const timeInput = document.getElementById("time");
 
-    timeInput.addEventListener("change", function () {
-        let value = this.value;
+        timeInput.addEventListener("change", function() {
+            let value = this.value;
 
-        if (value < "05:00") {
-            alert("Time must be after 5:00 AM");
-            this.value = "05:00";
-        }
+            if (value < "05:00") {
+                alert("Time must be after 5:00 AM");
+                this.value = "05:00";
+            }
 
-        if (value > "22:00") {
-            alert("Time must be before 10:00 PM");
-            this.value = "22:00";
-        }
+            if (value > "22:00") {
+                alert("Time must be before 10:00 PM");
+                this.value = "22:00";
+            }
+        });
     });
-});
+
 </script>
 
 

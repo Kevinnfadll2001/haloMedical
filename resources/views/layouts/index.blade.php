@@ -9,40 +9,40 @@
     <title>HALO MEDICAL TRANSPORT</title>
 
     <!-- Fav Icon -->
-   <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
 
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link href="assets/css/font-awesome-all.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/owl.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <link href="assets/css/odometer.css" rel="stylesheet">
-    <link href="assets/css/elpath.css" rel="stylesheet">
-    <link href="assets/css/color.css" id="jssDefault" rel="stylesheet">
-    <link href="assets/css/rtl.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/module-css/header.css" rel="stylesheet">
-    <link href="assets/css/module-css/banner.css" rel="stylesheet">
-    <link href="assets/css/module-css/about.css" rel="stylesheet">
-    <link href="assets/css/module-css/brand.css" rel="stylesheet">
-    <link href="assets/css/module-css/service.css" rel="stylesheet">
-    <link href="assets/css/module-css/funfact.css" rel="stylesheet">
-    <link href="assets/css/module-css/process.css" rel="stylesheet">
-    <link href="assets/css/module-css/chooseus.css" rel="stylesheet">
-    <link href="assets/css/module-css/category.css" rel="stylesheet">
-    <link href="assets/css/module-css/faq.css" rel="stylesheet">
-    <link href="assets/css/module-css/cta.css" rel="stylesheet">
-    <link href="assets/css/module-css/news.css" rel="stylesheet">
-    <link href="assets/css/module-css/subscribe.css" rel="stylesheet">
-    <link href="assets/css/module-css/footer.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/font-awesome-all.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/nice-select.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/odometer.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/elpath.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/color.css') }}" id="jssDefault" rel="stylesheet">
+    <link href="{{ asset('assets/css/rtl.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/banner.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/about.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/brand.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/service.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/funfact.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/process.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/chooseus.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/category.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/faq.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/cta.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/news.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/subscribe.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/module-css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
 
 </head>
 
@@ -155,7 +155,7 @@
                     <div class="top-inner">
                         <ul class="info-list">
                             <li><i class="icon-48"></i>Call:<a href="tel:912345432">+91 (234) 5432</a></li>
-                            <li><i class="icon-47"></i>Mail:<a href="mailto:info@example.com">info@example.com</a></li>
+                            <li><i class="icon-47"></i>Mail:<a href="mailto:reservations@halomedicaltransport.com">reservations@halomedicaltransport.com</a></li>
                         </ul>
                         <div class="right-column">
                             <div class="language-box">
@@ -181,7 +181,7 @@
                     <div class="outer-box">
                         <figure class="logo-box">
                             <a href="{{ route('home') }}">
-                                <img src="assets/images/logo.png" alt="Halo Medical Transport Logo" style="max-height:70px; width:auto; object-fit:contain; display:block;">
+                                <img src="{{ asset('assets/images/logo.png') }}" alt="Halo Medical Transport Logo" style="max-height:70px; width:auto; object-fit:contain; display:block;">
                             </a>
                         </figure>
 
@@ -213,6 +213,11 @@
                                                 About Us
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="{{ route('blog') }}" style="{{ request()->routeIs('blog') ? 'color:#0b3752; font-weight:bold;' : '' }}">
+                                                Blog
+                                            </a>
+                                        </li>
 
                                         <li>
                                             <a href="{{ route('facilities') }}" style="{{ request()->routeIs('facilities') ? 'color:#0b3752; font-weight:bold;' : '' }}">
@@ -238,7 +243,7 @@
                                 <div class="outer-box">
                                     <figure class="logo-box">
                                         <a href="{{ route('home') }}">
-                                            <img src="assets/images/logo.png" alt="Halo Medical Transport Logo" style="max-height:70px; width:auto; object-fit:contain; display:block;">
+                                            <img src="{{ asset('assets/images/logo.png') }}" alt="Halo Medical Transport Logo" style="max-height:70px; width:auto; object-fit:contain; display:block;">
                                         </a>
                                     </figure>
                                     <div class="menu-area">
@@ -263,7 +268,7 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="{{ route('home') }}"><img src="assets/images/logo.png" alt="" title=""></a>
+                <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.png') }}" alt="" title=""></a>
                 </div>
                 <div class="menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -271,9 +276,10 @@
                 <div class="contact-info">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li>Southern California, USA</li>
-                        <li><a href="tel:+8801682648101">+xxxxxxxxxxxxxx</a></li>
-                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li>21804 Cactus Ave Suite 103
+                            Riverside CA 92518</li>
+                        <li><a href="tel:+19519004840"> (951) 900-4840</a></li>
+                        <li><a href="mailto:reservations@halomedicaltransport.com">reservations@halomedicaltransport.com</a></li>
                     </ul>
                 </div>
                 <!-- <div class="social-links">
@@ -353,9 +359,10 @@
                                     Reliable Non-Emergency Medical Transportation
                                 </h4>
 
-                                <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Phone:</strong> (XXX) XXX-XXXX</p>
-                                <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Email:</strong> support@carelineNEMT.com</p>
-                                <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Address:</strong> Placeholder Address</p>
+                                <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Phone:</strong> (951) 900-4840</p>
+                                <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Email:</strong> reservations@halomedicaltransport.com</p>
+                                <p style="margin:0 0 6px;"><strong style="color:#ffffff;">Address:</strong> 21804 Cactus Ave Suite 103
+                                    Riverside CA 92518</p>
 
                                 {{-- <div class="social-links" style="display:flex; gap:12px; margin-top:12px;">
                                     <a href="#" style="color:#5fa9d6; font-size:16px;"><i class="fab fa-facebook-f"></i></a>
@@ -375,7 +382,7 @@
                                     <li><a href="{{ route('services') }}" class="footer-link" style="color:#c7d0d5;">Services</a></li>
                                     <li><a href="{{ route('about') }}" class="footer-link" style="color:#c7d0d5;">About</a></li>
                                     <li><a href="{{ route('facilities') }}" class="footer-link" style="color:#c7d0d5;">Partnerships</a></li>
-                                    <li><a href="#" class="footer-link" style="color:#c7d0d5;">Blog</a></li>
+                                    <li><a href="{{ route('blog') }}" class="footer-link" style="color:#c7d0d5;">Blog</a></li>
                                     <li><a href="{{ route('contact') }}" class="footer-link" style="color:#c7d0d5;">Contact</a></li>
                                 </ul>
                             </div>
@@ -453,25 +460,24 @@
 
 
     <!-- jequery plugins -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/parallax-scroll.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/scrolltop.min.js"></script>
-    <script src="assets/js/odometer.js"></script>
-    <script src="assets/js/language.js"></script>
-    <script src="assets/js/jquery.lettering.min.js"></script>
-    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/validation.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.fancybox.js') }}"></script>
+    <script src="{{ asset('assets/js/appear.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/parallax-scroll.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/scrolltop.min.js') }}"></script>
+    <script src="{{ asset('assets/js/odometer.js') }}"></script>
+    <script src="{{ asset('assets/js/language.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.lettering.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.circleType.js') }}"></script>
 
     <!-- main-js -->
-    <script src="assets/js/script.js"></script>
-
+    <script src="{{ asset('assets/js/script.js') }}"></script>
 </body><!-- End of .page_wrapper -->
 
 </html>

@@ -33,6 +33,13 @@ Route::get('/facilities', function () {
 
 
 
+Route::get('/blog/blog1', function () {
+    return view('blogs.blog1');
+})->name('blog.blog1');
+
+Route::get('/blog/blog2', function () {
+    return view('blogs.blog2');
+})->name('blog.blog2');
 
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
