@@ -80,10 +80,10 @@
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-22.jpg" alt="">
+                                            <img src="assets/images/service/wheelchair_440x470.png" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                            <img src="assets/images/service/service-23.jpg" alt="">
+                                            <img src="assets/images/service/wheelchair_290x290.png" alt="">
                                         </figure>
                                     </div>
                                 </div>
@@ -152,10 +152,10 @@
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-1.jpg" alt="">
+                                            <img src="assets/images/service/ambulatory_440x470.png" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                            <img src="assets/images/service/service-2.jpg" alt="">
+                                            <img src="assets/images/service/ambulatory_290x290.png" alt="">
                                         </figure>
                                     </div>
                                 </div>
@@ -226,10 +226,10 @@
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-24.jpg" alt="">
+                                            <img src="assets/images/service/gurney_440x470.png" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                            <img src="assets/images/service/service-25.jpg" alt="">
+                                            <img src="assets/images/service/gurney_290x290.png" alt="">
                                         </figure>
                                     </div>
                                 </div>
@@ -296,10 +296,10 @@
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-26.jpg" alt="">
+                                            <img src="assets/images/service/hospital_discharge_440x470.png" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                            <img src="assets/images/service/service-27.jpg" alt="">
+                                            <img src="assets/images/service/hospital_discharge_290x290.png" alt="">
                                         </figure>
                                     </div>
                                 </div>
@@ -368,10 +368,10 @@
                                 <div class="col-lg-6 col-md-12 image-column">
                                     <div class="image-box pl_110 pb_50">
                                         <figure class="image image-1 image-hov-one">
-                                            <img src="assets/images/service/service-24.jpg" alt="">
+                                            <img src="assets/images/service/ift_440x470.png" alt="">
                                         </figure>
                                         <figure class="image image-2 image-hov-two">
-                                             <img src="assets/images/service/service-25.jpg" alt="">
+                                             <img src="assets/images/service/ift_290x290.png" alt="">
                                         </figure>
                                     </div>
                                 </div>
