@@ -41,6 +41,9 @@ Route::get('/blog/blog2', function () {
     return view('blogs.blog2');
 })->name('blog.blog2');
 
+Route::get('/blog/blog3', function () {
+    return view('blogs.blog3');
+})->name('blog.blog3');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 

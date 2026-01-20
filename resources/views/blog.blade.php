@@ -18,45 +18,81 @@
                             <div class="news-block-four">
                                 <div class="inner-box">
                                     <span class="post-date">Apr 26, 2025</span>
-                                    <h4><a href="blog-details.html">International air ambulance Long distance patient transport</a></h4>
+                                    <h4>
+                                        <a href="{{ route('blog.blog1') }}">
+                                            What Is Non-Emergency Medical Transportation (NEMT) and Who Is It For?
+                                        </a>
+                                    </h4>
                                     <ul class="post-info">
-                                        <li><i class="icon-30"></i><a href="blog-details.html">Admin</a></li>
-                                        <li><i class="icon-31"></i><span>4 Comment</span></li>
+                                        <li><span>General</span></li>
+                                        <li><span>Healthcare</span></li>
                                     </ul>
-                                    <p>Prepare for interview research the company understand the job role and responsibilities, and prepare questions to ask the interviews very well and good.</p>
-                                    <div class="link"><a href="{{ route('blog.blog1') }}">Read More</span><i class="icon-39"></i></a></div>
+                                    <p>
+                                        Learn what Non-Emergency Medical Transportation (NEMT) is, who it serves,
+                                        and how it helps patients safely access medical care without emergencies.
+                                    </p>
+                                    <div class="link">
+                                        <a href="{{ route('blog.blog1') }}">
+                                            <span>Read More</span><i class="icon-39"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                             <div class="news-block-four">
                                 <div class="inner-box">
                                     <span class="post-date">Apr 25, 2025</span>
-                                    <h4><a href="blog-details.html">Repatriation Stories Spain Ireland with a medical escort</a></h4>
+                                    <h4>
+                                        <a href="{{ route('blog.blog2') }}">
+                                            How Reliable Medical Transportation Improves Patient Outcomes
+                                        </a>
+                                    </h4>
                                     <ul class="post-info">
-                                        <li><i class="icon-30"></i><a href="blog-details.html">Admin</a></li>
-                                        <li><i class="icon-31"></i><span>5 Comment</span></li>
+                                        <li><span>Healthcare</span></li>
+                                        <li><span>NEMT</span></li>
                                     </ul>
-                                    <p>Prepare for interview research the company understand the job role and responsibilities, and prepare questions to ask the interviews very well and good.</p>
-                                    <div class="link"><a href="{{ route('blog.blog2') }}"><span>Read More</span><i class="icon-39"></i></a></div>
+                                    <p>
+                                        Discover how dependable Non-Emergency Medical Transportation (NEMT)
+                                        reduces missed appointments and improves overall patient outcomes.
+                                    </p>
+                                    <div class="link">
+                                        <a href="{{ route('blog.blog2') }}">
+                                            <span>Read More</span><i class="icon-39"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                             <div class="news-block-four">
                                 <div class="inner-box">
                                     <span class="post-date">Apr 24, 2025</span>
-                                    <h4><a href="blog-details.html">Emergency Ambulance Service Ambulance services play</a></h4>
+                                    <h4>
+                                        <a href="{{ route('blog.blog3') }}">
+                                            5 Things to Look for When Choosing a Medical Transportation Provider
+                                        </a>
+                                    </h4>
                                     <ul class="post-info">
-                                        <li><i class="icon-30"></i><a href="blog-details.html">Admin</a></li>
-                                        <li><i class="icon-31"></i><span>1 Comment</span></li>
+                                        <li><span>Guide</span></li>
+                                        <li><span>NEMT</span></li>
                                     </ul>
-                                    <p>Prepare for interview research the company understand the job role and responsibilities, and prepare questions to ask the interviews very well and good.</p>
-                                    <div class="link"><a href="blog-details.html"><span>Read More</span><i class="icon-39"></i></a></div>
+                                    <p>
+                                        Choosing the right NEMT provider matters. Here are five key factors
+                                        that ensure safe, reliable medical transportation for patients.
+                                    </p>
+                                    <div class="link">
+                                        <a href="{{ route('blog.blog3') }}">
+                                            <span>Read More</span><i class="icon-39"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+
+                        <!-- <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                             <div class="news-block-four">
                                 <div class="inner-box">
                                     <span class="post-date">Apr 23, 2025</span>
@@ -153,7 +189,7 @@
                                     <div class="link"><a href="blog-details.html"><span>Read More</span><i class="icon-39"></i></a></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     {{-- <div class="pagination-wrapper pt_30">
                                 <ul class="pagination">
