@@ -85,7 +85,7 @@
                                                 <p>Your safety is our top priority. We uphold rigorous standards,
                                                     including:</p>
                                                 <ul class="list-style-one clearfix">
-                                                    <li>ADA-compliant vehicles</li>
+                                                    <li>ADA-compliant vehicless</li>
                                                     <li>HIPAA-safe communication</li>
                                                     <li>Daily vehicle sanitizing</li>
                                                     <li>CPR & First Aid certified drivers</li>
